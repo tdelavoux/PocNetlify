@@ -1,0 +1,201 @@
+:root{
+    --nv-1:#121212;
+    --nv-2:#2a2a2a;
+    --nv-3:#343434;
+
+    --white:#cfcfcf;
+    --light-grey-text:#979696;
+
+    --blue:#0078f2;
+}
+
+body{
+    background-color:var(--nv-1);
+    margin:0;
+    padding:0 0 3em 0;
+}
+
+/* ------------------> Navbar ------------------------------- */
+.header{
+    background-color:var(--nv-2);
+    color:var(--light-grey-text);
+    height:3.7em;
+    display:flex;
+    justify-content: space-between;
+}
+.header-links{
+    height:100%;
+    display:flex;
+}
+.text-color-hover:hover{
+    color:var(--white);
+}
+.nav-link{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: OpenSans,sans-serif,arial;
+    font-size: 0.75em;
+    padding: 0 1em;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.accent-bg-color-before{
+    position:relative;
+}
+.accent-bg-color-before:before{
+    background-color: var(--blue);
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 0;
+    left: 0;
+    position: absolute;
+    -webkit-transition: height .2s ease-in-out;
+    -o-transition: height .2s ease-in-out;
+    transition: height .2s ease-in-out;
+    width: 100%;
+}
+.accent-bg-color-before.active:before, .accent-bg-color-before:hover:before{
+    height:5px;
+}
+.nav-button{
+    background-color:var(--blue);
+    color:var(--white);
+}
+#search-bar{
+    height:25px;
+    border-radius: 30px;
+    border:none;
+    background-color:var(--nv-2);
+    color: var(--light-grey-text);
+    outline:none;
+    padding:8px 30px;
+    font-size:15px;
+}
+#search-bar:focus{
+    background-color: var(--nv-3);
+    color:var(--white);
+}
+
+
+/* ------------------> Content ------------------------------- */
+section{
+    max-width:1000px;
+    padding: 0 1em;
+    margin:0 auto;
+}
+.game-line{
+    padding:0.7em;
+    border-radius:16px;
+    gap:10px;
+}
+.game-line:hover{
+    background-color:var(--nv-3);
+}
+.game-card{
+    align-self: stretch;
+    border-radius:15px;
+    color: var(--white);
+    cursor: pointer;
+}
+.game-card img, .discount-card img, .game-line img{
+    max-width:100%;
+    border-radius:15px;
+    margin-bottom: 1em;
+    filter: brightness(0.95);
+}
+.game-line img{
+    width:20%;
+    margin-bottom:0;
+}
+.game-line div{
+    width:80%;
+    height:100%;
+    display:flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.game-card img:hover, .discount-card img:hover, .game-line img:hover{
+    filter: brightness(1.2);
+    filter: contrast(95%);
+}
+.card-text p{
+    color: var(--light-grey-text)
+}
+
+.discount-games{
+    box-sizing: content-box;
+    height: 100%;
+    cursor: pointer;
+}
+.discount-card{
+    color:var(--light-grey-text)
+}
+.tag{
+    padding:7px;
+    color: var(--white);
+    font-size:10px;
+    font-weight: bold;
+    background-color: var(--blue);
+    border-radius: 5px;
+}
+.old-price{
+    font-size:0.9rem;
+    text-decoration:line-through;
+}
+.price{
+    color:var(--white);
+    font-weight: bold;
+}
+.free-games{
+    background-color:var(--nv-2);
+    padding:2em;
+    border-radius:4px;
+}
+.btn{
+    background-color: transparent;
+    border:solid 1px var(--white);
+    text-transform: uppercase;
+    color: var(--white);
+    padding:11px;
+    font-size: 10px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+.game-column:not(:last-child){
+    border-right: solid 1px var(--nv-3);
+}
+.game-column{
+    padding: 0 1em;
+}
+
+.title{
+    display:flex;
+    align-items: center;
+    color:var(--white);
+    font-size:17px;
+}
+.title i svg{width:30px; margin: 0 8px}
+
+/* ------------------> Basic styles ------------------------------- */
+.grid-4{display:grid;grid-template-columns:repeat(4, 1fr);gap:40px;}
+.grid-3{display:grid;grid-template-columns:repeat(3, 1fr);gap:20px;}
+.grid-2{display:grid;grid-template-columns:repeat(2, 1fr);gap:20px;}
+.stdrad{border-radius:15px;}
+.mt-05{margin-top: 0.5em;}
+.mt-2{margin-top: 2em;}
+.mt-1{margin-top: 1em;}
+.mb-1{margin-bottom:1em;}
+.flex-center{display:flex;align-items: center;justify-content: center;}
+.sb{display:flex;align-items: center;justify-content: space-between;}
+.flex-column{display:flex;flex-direction: column;}
+.elispable{text-overflow: ellipsis; white-space: nowrap;overflow: hidden;}
+a{color:unset;text-decoration: unset;}
+ol, ul {list-style: none outside none;padding:0;margin:0}
+h1, h2, h3, h4, h5, h6{margin:0;padding:0; color:var(--white);}
+p{margin:0.5em 0; text-align: justify; text-justify: auto; font-size:15px;}
+*{    font-family: Inter,sans-serif; font-weight: normal;font-size:1rem;}

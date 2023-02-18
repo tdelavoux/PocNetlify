@@ -1,9 +1,268 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Example</title>
-    </head>
-    <body>
-        <p>This is a poc to deploy simple static page to Netlify trhough Github.</p>
-    </body>
-</html>
+  <head>
+    <title>Epic Game Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/app.css">
+    
+  </head>
+  <body>
+
+    <header class="header">
+      <ul class="header-links">
+        <li class="nav-link"><a href="#">/*Logo*/</a></li>
+        <li class="nav-link accent-bg-color-before text-color-hover active"><a href="#">Jeux</a></li>
+        <li class="nav-link accent-bg-color-before text-color-hover"><a href="#">Offres</a></li>
+        <li class="nav-link accent-bg-color-before text-color-hover"><a href="#">Support</a></li>
+      </ul>
+
+      <ul class="header-links">
+        <li class="nav-link text-color-hover" href="#"><a>Connexion</a></li>
+        <li class="nav-link nav-button"><a href="#">Télécharger le launcher</a></li>
+      </ul>
+    </header>
+
+    <section class="mt-2">
+      <input id="search-bar" type="text" placeholder="Search for a game"/>
+    </section>
+
+    <section class="discount-games mt-2">
+      <h2 class="mb-1">Offres du moment</h2>
+      <div class="grid-4">
+        <div class="discount-card">
+          <img src="https://cdn1.epicgames.com/spt-assets/e8817e5c24d74a8496206946bd1f2282/colossal-cave-1x6s1.jpg?h=480&resize=1&w=360" />
+          <span>Jeu de base</span>
+          <h3>Colossal Cave</h3>
+          <div class="mt-05">
+            <span class="tag">- 50 %</span>
+            <span class="old-price">70€</span>
+            <span class="price">35€</span>
+          </div>
+        </div>
+  
+        <div class="discount-card">
+          <img src="https://cdn1.epicgames.com/offer/oregano/an18-store-portrait-1200x1600-1200x1600-665115795_1200x1600-a714948f3c93306d618c279edded0525?h=480&resize=1&w=360" />
+          <span>Jeu de base</span>
+          <h3>Anno 1800</h3>
+          <div class="mt-05">
+            <span class="tag">- 50 %</span>
+            <span class="old-price">70€</span>
+            <span class="price">35€</span>
+          </div>
+        </div>
+  
+        <div class="discount-card">
+          <img src="https://cdn1.epicgames.com/offer/d2d162953fec40e381867d7af8371362/EGS_HonkaiImpact3rd_miHoYoLimited_S2_1200x1600-1b38bfc22a3cbe6a187573afb4811860?h=480&resize=1&w=360" />
+          <span>Jeu de base</span>
+          <h3>Honkai 3</h3>
+          <div class="mt-05">
+            <span class="tag">- 50 %</span>
+            <span class="old-price">70€</span>
+            <span class="price">35€</span>
+          </div>
+        </div>
+  
+        <div class="discount-card">
+          <img src="https://cdn1.epicgames.com/spt-assets/71df10ec8724451e834b31b6959d92f1/snowtopia--ski-resort-builder-1pcos.jpg?h=480&resize=1&w=360" />
+          <span>Jeu de base</span>
+          <h3>Sbowtopia</h3>
+          <div class="mt-05">
+            <span class="tag">- 50 %</span>
+            <span class="old-price">70€</span>
+            <span class="price">35€</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-2">
+
+      <div class="free-games">
+        <span class="title mb-1">
+          <i><svg xmlns="http://www.w3.org/2000/svg" class="svg css-uwwqev" viewBox="0 0 32 32"><g fill="currentColor" fill-rule="evenodd"><path d="M30.443 16.605H19.72v-3.46h10.724v3.46zm-2.075 12.308c0 .397-.576.838-1.402.838h-7.247V17.99h8.648v10.924zm-14.876.838h4.843v-18.68h-4.843v18.68zm-10.033-.838V17.99h8.649v11.762H4.861c-.826 0-1.402-.441-1.402-.838zM1.384 13.146h10.724v3.46H1.384v-3.46zm1.773-4.324c0-1.622 1.319-2.94 2.94-2.94 2.752 0 5.093 3.78 5.575 5.88H6.097a2.944 2.944 0 0 1-2.94-2.94zm22.573-2.94c1.621 0 2.94 1.318 2.94 2.94 0 1.621-1.319 2.94-2.94 2.94h-5.574c.481-2.1 2.822-5.88 5.574-5.88zm5.405 5.88h-2.244a4.304 4.304 0 0 0 1.163-2.94 4.329 4.329 0 0 0-4.324-4.325c-2.89 0-5.227 2.813-6.341 5.294a.686.686 0 0 0-.362-.105H12.8a.686.686 0 0 0-.362.105c-1.114-2.481-3.45-5.294-6.34-5.294a4.329 4.329 0 0 0-4.325 4.325c0 1.136.444 2.168 1.163 2.94H.692a.692.692 0 0 0-.692.692v4.843c0 .382.31.692.692.692h1.384v10.924c0 1.246 1.223 2.222 2.785 2.222h22.105c1.562 0 2.785-.976 2.785-2.222V17.99h1.384c.382 0 .692-.31.692-.692v-4.843a.692.692 0 0 0-.692-.692zM15.914 4.151c.381 0 .691-.31.691-.692V.692a.692.692 0 0 0-1.383 0v2.767c0 .382.31.692.692.692"></path><path d="M19.546 5.362a.69.69 0 0 0 .49-.203l1.037-1.037a.692.692 0 1 0-.978-.979l-1.038 1.038a.692.692 0 0 0 .489 1.181M11.792 5.16a.69.69 0 0 0 .978 0 .692.692 0 0 0 0-.979l-1.038-1.038a.692.692 0 1 0-.978.979l1.038 1.037z"></path></g></svg></i>
+          <span>Free this week</span>
+        </span>
+
+        <div class="grid-2">
+          <div class="game-card">
+            <img src="https://cdn2.unrealengine.com/egs-returnal-carousel-desktop-1248x702-5ec90a11d412.jpg?h=720&resize=1&w=1280"/>
+            <span class="card-text">
+              <h3>Dead Space</h3>
+              <p>Get it before 12 Fev. 17PM </p>
+            </span>
+          </div>
+  
+          <div class="game-card">
+            <img src="https://cdn2.unrealengine.com/egs-hogwarts-legacy-carousel-desktop-v3-1248x702-d5639baf4870.jpg?h=1080&resize=1&w=1920"/>
+            <span class="card-text">
+              <h3>Dead Space</h3>
+              <p>Get it before 12 Fev. 17PM </p>
+            </span>
+          </div>
+        </div>
+      </div>
+ 
+    </section>
+
+    <section class="featured-games mt-2">
+      <h2 class="mb-1">Nouveautés</h2>
+      <div class="grid-3">
+        <div class="game-card">
+          <img src="https://cdn2.unrealengine.com/egs-the-last-of-us-part-1-digital-deluxe-edition-breaker-1920x1080-720133832504.jpg?h=720&resize=1&w=1280">
+          <span class="card-text">
+            <h3>The last of us</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla at nulla eget tempus. Proin ut nibh arcu. Morbi sodales scelerisque odio sed ultrices. Mauris ullamcorper ullamcorper mauris nec congue. Ut nec mauris ipsum. Curabitur id ultrices eros, at pellentesque erat. Donec fermentum tellus id tortor suscipit varius. </p>
+            <div class="mt-1">70,99€</div>
+          </span>
+        </div>
+        <div class="game-card">
+          <img src="https://cdn2.unrealengine.com/egs-shoulders-of-giants-breaker-v2-1920x1080-34880c773296.jpg?h=720&resize=1&w=1280">
+          <span class="card-text">
+            <h3>Shoulders of Giants</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla at nulla eget tempus. Proin ut nibh arcu. Morbi sodales scelerisque odio sed ultrices. Mauris ullamcorper ullamcorper mauris nec congue. Ut nec mauris ipsum. Curabitur id ultrices eros, at pellentesque erat. Donec fermentum tellus id tortor suscipit varius. </p>
+            <div class="mt-1">70,99€</div>
+          </span>
+        </div>
+        <div class="game-card">
+          <img src="https://cdn2.unrealengine.com/egs-dead-space-breaker-1920x1080-53879dc46ea2.jpg?h=720&resize=1&w=1280">
+          <span class="card-text">
+            <h3>Dead Space</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla at nulla eget tempus. Proin ut nibh arcu. Morbi sodales scelerisque odio sed ultrices. Mauris ullamcorper ullamcorper mauris nec congue. Ut nec mauris ipsum. Curabitur id ultrices eros, at pellentesque erat. Donec fermentum tellus id tortor suscipit varius. </p>
+            <div class="mt-1">70,99€</div>
+          </span>
+        </div>
+      </div>
+      
+    </section>
+
+    <section class="mt-2">
+      <div class="grid-3">
+        
+        <div class="flex-column game-column">
+          <div class="sb mb-1">
+            <h3>Meilleurs ventes</h3>
+            <button class="btn">voir plus</button>
+          </div>
+
+          <div class="flex-center game-line">
+            <img src="https://cdn1.epicgames.com/offer/b671fbc7be424e888c9346a9a6d3d9db/CodeRedemption_Celeste-340x440-873dacb76be8c59d659757b4b5284a611_1200x1600-9e39079f1ce19738e65d349a8bc98650?h=480&quality=medium&resize=1&w=360"/>
+            <div>
+              <h4>Celeste</h4>
+              <span class="price">55€</span>
+            </div>
+          </div>
+
+          <div class="flex-center game-line">
+            <img src="https://cdn1.epicgames.com/offer/2e953f5d56f44248ab500be341e54a65/EGS_WildWestDynasty_MoonPunchStudio_S2_1200x1600-0de7360bf8fd90124c93a8a5a29ae403?h=480&quality=medium&resize=1&w=360"/>
+            <div>
+              <h4>Wild West</h4>
+              <span class="price">55€</span>
+            </div>
+          </div>
+
+          <div class="flex-center game-line">
+            <img src="https://cdn1.epicgames.com/spt-assets/0e168f0bdd2d4ee79113ec5dead2ce72/elderand-17g68.jpg?h=480&quality=medium&resize=1&w=360"/>
+            <div>
+              <h4>Elderand</h4>
+              <span class="price">55€</span>
+            </div>
+          </div>
+
+          <div class="flex-center game-line">
+            <img src="https://cdn1.epicgames.com/spt-assets/3cb7b27265f544c1826264534fb8bbd0/evil-nun-the-broken-mask-1nf74.png?h=480&quality=medium&resize=1&w=360"/>
+            <div>
+              <h4 class="elispable">Evil Nun : the broken mask</h4>
+              <span class="price">55€</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flex-column game-column">
+          <div class="sb mb-1">
+            <h3>Meilleurs ventes</h3>
+            <button class="btn">voir plus</button>
+          </div>
+
+          <div class="flex-center game-line">
+            <img src="https://cdn1.epicgames.com/offer/b671fbc7be424e888c9346a9a6d3d9db/CodeRedemption_Celeste-340x440-873dacb76be8c59d659757b4b5284a611_1200x1600-9e39079f1ce19738e65d349a8bc98650?h=480&quality=medium&resize=1&w=360"/>
+            <div>
+              <h4>Celeste</h4>
+              <span class="price">55€</span>
+            </div>
+          </div>
+
+          <div class="flex-center game-line">
+            <img src="https://cdn1.epicgames.com/offer/2e953f5d56f44248ab500be341e54a65/EGS_WildWestDynasty_MoonPunchStudio_S2_1200x1600-0de7360bf8fd90124c93a8a5a29ae403?h=480&quality=medium&resize=1&w=360"/>
+            <div>
+              <h4>Wild West</h4>
+              <span class="price">55€</span>
+            </div>
+          </div>
+
+          <div class="flex-center game-line">
+            <img src="https://cdn1.epicgames.com/spt-assets/0e168f0bdd2d4ee79113ec5dead2ce72/elderand-17g68.jpg?h=480&quality=medium&resize=1&w=360"/>
+            <div>
+              <h4>Elderand</h4>
+              <span class="price">55€</span>
+            </div>
+          </div>
+
+          <div class="flex-center game-line">
+            <img src="https://cdn1.epicgames.com/spt-assets/3cb7b27265f544c1826264534fb8bbd0/evil-nun-the-broken-mask-1nf74.png?h=480&quality=medium&resize=1&w=360"/>
+            <div>
+              <h4 class="elispable">Evil Nun : the broken mask</h4>
+              <span class="price">55€</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flex-column game-column">
+          <div class="sb mb-1">
+            <h3>Meilleurs ventes</h3>
+            <button class="btn">voir plus</button>
+          </div>
+
+          <div class="flex-center game-line">
+            <img src="https://cdn1.epicgames.com/offer/b671fbc7be424e888c9346a9a6d3d9db/CodeRedemption_Celeste-340x440-873dacb76be8c59d659757b4b5284a611_1200x1600-9e39079f1ce19738e65d349a8bc98650?h=480&quality=medium&resize=1&w=360"/>
+            <div>
+              <h4>Celeste</h4>
+              <span class="price">55€</span>
+            </div>
+          </div>
+
+          <div class="flex-center game-line">
+            <img src="https://cdn1.epicgames.com/offer/2e953f5d56f44248ab500be341e54a65/EGS_WildWestDynasty_MoonPunchStudio_S2_1200x1600-0de7360bf8fd90124c93a8a5a29ae403?h=480&quality=medium&resize=1&w=360"/>
+            <div>
+              <h4>Wild West</h4>
+              <span class="price">55€</span>
+            </div>
+          </div>
+
+          <div class="flex-center game-line">
+            <img src="https://cdn1.epicgames.com/spt-assets/0e168f0bdd2d4ee79113ec5dead2ce72/elderand-17g68.jpg?h=480&quality=medium&resize=1&w=360"/>
+            <div>
+              <h4>Elderand</h4>
+              <span class="price">55€</span>
+            </div>
+          </div>
+
+          <div class="flex-center game-line">
+            <img src="https://cdn1.epicgames.com/spt-assets/3cb7b27265f544c1826264534fb8bbd0/evil-nun-the-broken-mask-1nf74.png?h=480&quality=medium&resize=1&w=360"/>
+            <div>
+              <h4 class="elispable">Evil Nun : the broken mask</h4>
+              <span class="price">55€</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </body>
+</html
